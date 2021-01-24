@@ -1,0 +1,236 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container p {
+  color: black;
+}
+
+.hero_container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-between;
+  min-height: 80vh;
+}
+.hero_container .developer {
+  margin: 0;
+  font-size: 16vw;
+  font-weight: 600;
+  color: white;
+  text-shadow: 20px 20px 30px rgba(175, 162, 162, 0.2);
+  user-select: none;
+  letter-spacing: 2vw;
+  text-align: center;
+}
+
+.about_me {
+  width: 40%;
+  margin: 30px 30px;
+  padding: 0 15%;
+  align-self: center;
+  text-align: center;
+}
+.about_me h1 {
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1em;
+  margin: 0;
+}
+.about_me p {
+  font-size: 1.5em;
+  color: #554d4d;
+  margin: 40px 0;
+}
+
+.brand-icon_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.brand-icon_container a {
+  color: black;
+}
+
+.projects_section {
+  margin: 50px 3%;
+  padding: 2%;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.projects_section h2 {
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+  font-size: 4em;
+  text-align: center;
+}
+.projects_section button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.projects_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  color: black;
+  flex-wrap: wrap;
+}
+.projects_container p {
+  color: black;
+}
+
+.project_container {
+  display: flex;
+  max-width: 48%;
+  height: auto;
+  flex-direction: column;
+  margin: 20px auto;
+}
+.project_container img {
+  position: relative;
+  border-radius: 4px;
+}
+.project_container h3 {
+  font-weight: 600;
+  text-align: center;
+}
+.project_container:hover img {
+  animation-name: darker;
+  animation-duration: 1s;
+  filter: brightness(10%);
+  transform: scale(1.02);
+  border-radius: 3px;
+}
+.project_container:hover .appbar {
+  animation-name: opacity;
+  animation-duration: 1s;
+  opacity: 1;
+}
+.project_container:hover .appbar p {
+  padding-top: 0;
+  animation-name: textAppear;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  opacity: 1;
+}
+.project_container:hover .appbar h4 {
+  padding-top: 0;
+  animation-name: textAppear;
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+}
+.project_container:hover .appbar a {
+  padding-top: 0;
+  animation-name: textAppear;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+.project_container:hover .project_details_arrow {
+  margin-top: 2px;
+  animation-name: arrowDetails;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.appbar {
+  box-sizing: border-box;
+  display: flex;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10000;
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+}
+.appbar h4 {
+  font-size: 2rem;
+  color: white;
+  margin: 20px 0;
+  width: 60%;
+}
+.appbar p {
+  color: #b1b5b9;
+  margin: 0;
+}
+.appbar a {
+  text-decoration: none;
+}
+.appbar a p {
+  color: #b1b5b9;
+}
+
+.arrowAnimation {
+  animation-name: arrowCategoryRight;
+  animation-duration: 3s;
+  margin-right: 25px;
+  margin-left: 10px;
+  animation-iteration-count: infinite;
+}
+
+@keyframes textAppear {
+  from {
+    opacity: 0;
+    padding-top: 20px;
+  }
+  to {
+    opacity: 1;
+    padding-top: 1px;
+  }
+}
+@keyframes arrowCategoryRight {
+  0% {
+    margin-right: 25px;
+    margin-left: 10px;
+  }
+  50% {
+    margin-right: 0px;
+    margin-left: 35px;
+  }
+  100% {
+    margin-right: 25px;
+    margin-left: 10px;
+  }
+}
+@keyframes arrowDetails {
+  0% {
+    margin-left: 10px;
+  }
+  50% {
+    margin-left: 25px;
+  }
+  100% {
+    margin-left: 10px;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes darker {
+  from {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+  to {
+    transform: scale(1.02);
+    filter: brightness(10%);
+  }
+}

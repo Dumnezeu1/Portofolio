@@ -1,0 +1,258 @@
+import {
+  faLinkedinIn,
+  faGithub,
+  faGithubAlt,
+  faAppStore,
+  faGooglePlay,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
+
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+
+import connectPromotional from "./assets/projectsImages/connect/promotional.png";
+
+import easyRentPromotional from "./assets/projectsImages/easyrent/promotional.png";
+
+export const brandIcons = [
+  {
+    id: 1,
+    icon: faLinkedinIn,
+    link: "https://www.linkedin.com/in/cosmin-alexandru-dumitrescu-547180172/",
+  },
+  {
+    id: 2,
+    icon: faGithub,
+    link: "https://github.com/Dumnezeu1",
+  },
+  {
+    id: 3,
+    icon: faEnvelope,
+    link: "mailto:alexdumitrescu12@yahoo.com",
+  },
+];
+
+export const mobileProjects = [
+  {
+    id: 1,
+    name: "E-TWOW Connect",
+    details: "Mobile Front-End (React native)",
+    description: "News, bluetooth and product showcase app",
+    imageUrl: connectPromotional,
+    workingTime: "2020 - Current",
+    liveData: [
+      {
+        id: 1,
+        icon: faGithubAlt,
+        link: "https://www.google.ro",
+      },
+      {
+        id: 2,
+        icon: faAppStore,
+        link: "https://www.google.ro",
+      },
+      {
+        id: 3,
+        icon: faGooglePlay,
+        link: "https://www.google.ro",
+      },
+    ],
+    languages: [
+      { id: 1, name: "React Native", icon: faReact, link: "pyla" },
+      { id: 2, name: "React Native", icon: faReact, link: "pyla" },
+      { id: 3, name: "React Native", icon: faReact, link: "pyla" },
+      { id: 4, name: "React Native", icon: faReact, link: "pyla" },
+    ],
+  },
+  {
+    id: 2,
+    name: "E-TWOW EasyRental",
+    details: "Mobile Front-End (React native)",
+    description: "Renting electric scooters app",
+    imageUrl: easyRentPromotional,
+    workingTime: "2020 - Current",
+    liveData: [
+      {
+        id: 1,
+        icon: faGithubAlt,
+        link: "https://www.google.ro",
+      },
+      {
+        id: 2,
+        icon: faAppStore,
+        link: "https://www.google.ro",
+      },
+      {
+        id: 3,
+        icon: faGooglePlay,
+        link: "https://www.google.ro",
+      },
+    ],
+    languages: [
+      { id: 1, name: "React Native", icon: faReact, link: "pyla" },
+      { id: 2, name: "React Native", icon: faReact, link: "pyla" },
+    ],
+  },
+];
+
+export const educationData = [
+  {
+    id: 1,
+    name: "Studying E-Business (master degree)",
+    descriptions: [
+      {
+        id: 1,
+        name: "Faculty of Automation, Computers and Electronics — Craiova",
+      },
+    ],
+    date: "Oct 2020 — Current",
+  },
+  {
+    id: 2,
+    name: "Bachelor degree in robotics",
+    descriptions: [
+      {
+        id: 1,
+        name: "Faculty of Automation, Computers and Electronics — Craiova",
+      },
+    ],
+    date: "Oct 2016 — July 2020",
+  },
+  {
+    id: 3,
+    name: "Mathematical informatics",
+    descriptions: [{ id: 1, name: "'Tudor Arghezi' High School — Craiova" }],
+    date: "Sep 2012 — Jun 2016",
+  },
+];
+
+export const experienceData = [
+  {
+    id: 1,
+    name: "E-TWOW",
+    descriptions: [
+      { id: 1, name: "E-TWOW Connect - Mobile Front-End" },
+      { id: 2, name: "E-TWOW EasyRental - Mobile Front-End" },
+    ],
+    date: "Jan 2020 — Current",
+    technologies: [{ id: 1, name: "React Native" }],
+  },
+  {
+    id: 2,
+    name: "OSF Global Services Academy (Back-End)",
+    descriptions: [
+      {
+        id: 1,
+        name: "Backend for a shopping cart (Express.js)",
+      },
+    ],
+    date: "Oct 2019 — Nov 2019",
+    technologies: [
+      { id: 1, name: "Node.js" },
+      { id: 2, name: "Express.js" },
+    ],
+  },
+  {
+    id: 3,
+    name: "iQuest University",
+    descriptions: [
+      {
+        id: 1,
+        name:
+          "Intro to Web-Dev: I created an e-commerce single page application to order food (like foodpanda)",
+      },
+      {
+        id: 2,
+        name:
+          "Advanced Frameworks: Same concept as the first application (React",
+      },
+    ],
+    date: "Feb 2019 — Aug 2019",
+    technologies: [
+      { id: 1, name: "React.js" },
+      { id: 2, name: "Vanilla JS" },
+      { id: 3, name: "SCSS" },
+    ],
+  },
+
+  {
+    id: 4,
+    name: "Roweb summer practive",
+    descriptions: [
+      {
+        id: 1,
+        name:
+          "Creating a CR,D(createV readV updateVdelete) in LaravelV then transforming it into Lumen(removing the ,I part) and then combining Lumen(back-end) with React(front-end). ",
+      },
+    ],
+    date: "Jun 2019 — Aug 2019",
+    technologies: [
+      { id: 1, name: "Laravel" },
+      { id: 2, name: "Lumen" },
+      { id: 3, name: "React.js" },
+    ],
+  },
+
+  {
+    id: 5,
+    name: "Robomaniacs",
+    descriptions: [
+      {
+        id: 1,
+        name: "I participated in the line follower competition",
+      },
+    ],
+    date: "Mar 2019",
+    technologies: [
+      { id: 1, name: "Microcontrollers" },
+      { id: 2, name: "Arduino" },
+    ],
+  },
+  {
+    id: 6,
+    name: "Robotics Championship",
+    descriptions: [
+      {
+        id: 1,
+        name: "I participated in the Sumo robot competition",
+      },
+    ],
+    date: "Apr 2019",
+    technologies: [
+      { id: 1, name: "Microcontrollers" },
+      { id: 2, name: "Arduino" },
+    ],
+  },
+  {
+    id: 7,
+    name: "OSF Global Services Academy (Front-End)",
+    descriptions: [
+      {
+        id: 1,
+        name: "I created an e-commerce single page application to sell shoes",
+      },
+    ],
+    date: "Oct 2018 — Nov 2018",
+    technologies: [
+      { id: 1, name: "SASS" },
+      { id: 2, name: "jQuery" },
+      { id: 3, name: "JS Vanilla" },
+    ],
+  },
+  {
+    id: 8,
+    name: "Incesa Internship",
+    descriptions: [
+      {
+        id: 1,
+        name:
+          "An application made in JA3A that  used MariaDBV we could update, delete or insert data into JTable  or JTree and export into GML.",
+      },
+    ],
+    date: "Apr 2018 — Sep 2018",
+    technologies: [
+      { id: 1, name: "JAVA" },
+      { id: 2, name: "MariaDB" },
+      { id: 3, name: "XML" },
+    ],
+  },
+];
