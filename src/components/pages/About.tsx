@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../style/dist/About.css";
 
 import { educationData, experienceData } from "../config";
@@ -6,6 +6,10 @@ import { educationData, experienceData } from "../config";
 import ListDataWithDetails from "../utils/ListDataWithDetails";
 
 const About: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <section className="projects_section">

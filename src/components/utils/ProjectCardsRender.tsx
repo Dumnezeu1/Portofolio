@@ -21,7 +21,7 @@ interface ProjectData {
       name: string;
       icon: IconDefinition;
     }>;
-    liveData: Array<{
+    liveData?: Array<{
       id: number;
       icon: IconDefinition;
       link: string;
@@ -81,12 +81,14 @@ const ProjectCardsRender: React.FC<ProjectData> = ({ projectData }) => {
                   </Link>
                 </div>
 
-                <div style={{ width: "40%", margin: "0 auto" }}>
-                  <IconsRenderWithSpacer
-                    renderIcons={liveData}
-                    color={"white"}
-                  />
-                </div>
+                {liveData && (
+                  <div style={{ width: "40%", margin: "0 auto" }}>
+                    <IconsRenderWithSpacer
+                      renderIcons={liveData}
+                      color={"white"}
+                    />
+                  </div>
+                )}
               </div>
             </div>
           </div>

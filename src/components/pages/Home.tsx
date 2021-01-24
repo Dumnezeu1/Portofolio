@@ -1,7 +1,7 @@
 import React from "react";
 import "../style/dist/Home.css";
 
-import { brandIcons, mobileProjects } from "../config";
+import { brandIcons, mobileProjects, webProjects } from "../config";
 
 import IconsRenderWithSpacer from "../utils/IconsRenderWithSpacer";
 
@@ -30,6 +30,12 @@ const Home: React.FC = () => {
         <h2>Mobile projects</h2>
         <div className="projects_container">
           <ProjectCardsRender projectData={mobileProjects} />
+        </div>
+      </section>
+      <section className="projects_section">
+        <h2>Web projects</h2>
+        <div className="projects_container">
+          <ProjectCardsRender projectData={webProjects} />
         </div>
       </section>
     </div>

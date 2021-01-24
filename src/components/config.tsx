@@ -13,6 +13,11 @@ import connectPromotional from "./assets/projectsImages/connect/promotional.png"
 
 import easyRentPromotional from "./assets/projectsImages/easyrent/promotional.png";
 
+import letsEatPromotional from "./assets/projectsImages/letsEat/promotional.png";
+
+import todoListPromotional from "./assets/projectsImages/todoList/promotional.png";
+import servicePromotional from "./assets/projectsImages/service/promotional.png";
+
 export const brandIcons = [
   {
     id: 1,
@@ -41,11 +46,6 @@ export const mobileProjects = [
     workingTime: "2020 - Current",
     liveData: [
       {
-        id: 1,
-        icon: faGithubAlt,
-        link: "https://www.google.ro",
-      },
-      {
         id: 2,
         icon: faAppStore,
         link: "https://www.google.ro",
@@ -72,11 +72,6 @@ export const mobileProjects = [
     workingTime: "2020 - Current",
     liveData: [
       {
-        id: 1,
-        icon: faGithubAlt,
-        link: "https://www.google.ro",
-      },
-      {
         id: 2,
         icon: faAppStore,
         link: "https://www.google.ro",
@@ -93,6 +88,75 @@ export const mobileProjects = [
     ],
   },
 ];
+
+export const webProjects = [
+  {
+    id: 1,
+    name: "Let's Eat",
+    details: "Web Front-End (React)",
+    description: "Food order service",
+    imageUrl: letsEatPromotional,
+    workingTime: "2019 - 2020",
+    liveData: [
+      {
+        id: 1,
+        icon: faGithubAlt,
+        link: "https://github.com/Dumnezeu1/Let-s-Eat-REACT",
+      },
+      {
+        id: 2,
+        icon: faAppStore,
+        link: "https://www.google.ro",
+      },
+    ],
+    languages: [
+      { id: 1, name: "React Native", icon: faReact, link: "pyla" },
+      { id: 2, name: "React Native", icon: faReact, link: "pyla" },
+      { id: 3, name: "React Native", icon: faReact, link: "pyla" },
+      { id: 4, name: "React Native", icon: faReact, link: "pyla" },
+    ],
+  },
+
+  {
+    id: 2,
+    name: "Service",
+    details: "Web Front-End (React native)",
+    description: "Service management",
+    imageUrl: servicePromotional,
+    workingTime: "2020 - Current",
+    liveData: [],
+    languages: [
+      { id: 1, name: "React Native", icon: faReact, link: "pyla" },
+      { id: 2, name: "React Native", icon: faReact, link: "pyla" },
+    ],
+  },
+  {
+    id: 3,
+    name: "Todo List",
+    details: "Web Front-End (React native)",
+    description: "Basic todo list with local crud and filter.",
+    imageUrl: todoListPromotional,
+    workingTime: "2019",
+    liveData: [
+      {
+        id: 1,
+        icon: faGithubAlt,
+        link: "https://github.com/Dumnezeu1/todoList-useReducer-useContext",
+      },
+      {
+        id: 2,
+        icon: faAppStore,
+        link: "https://www.google.ro",
+      },
+    ],
+    languages: [
+      { id: 1, name: "React Native", icon: faReact, link: "pyla" },
+      { id: 2, name: "React Native", icon: faReact, link: "pyla" },
+    ],
+  },
+];
+
+// education
 
 export const educationData = [
   {
