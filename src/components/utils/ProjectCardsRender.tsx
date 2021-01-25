@@ -4,9 +4,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import ProjectDetailModal from "./ProjectDetailsModal";
 
 import IconsRenderWithSpacer from "./IconsRenderWithSpacer";
+
+interface LiveData {
+  id: number;
+  icon: IconDefinition;
+  link: string;
+}
+
+interface Languages {
+  id: number;
+  name: string;
+  icon: IconDefinition;
+  link: string;
+}
 
 interface ProjectData {
   projectData: Array<{
@@ -16,20 +29,26 @@ interface ProjectData {
     description: string;
     imageUrl: string;
     workingTime: string;
-    languages: Array<{
-      id: number;
-      name: string;
-      icon: IconDefinition;
-    }>;
-    liveData?: Array<{
-      id: number;
-      icon: IconDefinition;
-      link: string;
-    }>;
+
+    liveData?: Array<LiveData>;
+    projectMoreDetails: {
+      languages?: Array<Languages>;
+      detailedDescription: string;
+    };
   }>;
 }
 
 const ProjectCardsRender: React.FC<ProjectData> = ({ projectData }) => {
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   return (
     <>
       {projectData.map((data) => {
@@ -41,6 +60,7 @@ const ProjectCardsRender: React.FC<ProjectData> = ({ projectData }) => {
           details,
           workingTime,
           liveData,
+          projectMoreDetails,
         } = data;
         return (
           <div className="project_container" key={id}>
@@ -65,10 +85,9 @@ const ProjectCardsRender: React.FC<ProjectData> = ({ projectData }) => {
                   }}
                 >
                   <p>{workingTime}</p>
-
                   <h4>{description}</h4>
-                  <Link
-                    to="project"
+                  <div
+                    onClick={openModal}
                     style={{ display: "flex", alignItems: "center" }}
                   >
                     <p>More details</p>
@@ -78,7 +97,7 @@ const ProjectCardsRender: React.FC<ProjectData> = ({ projectData }) => {
                       size="sm"
                       color="#b1b5b9"
                     />
-                  </Link>
+                  </div>
                 </div>
 
                 {liveData && (
@@ -91,6 +110,11 @@ const ProjectCardsRender: React.FC<ProjectData> = ({ projectData }) => {
                 )}
               </div>
             </div>
+            <ProjectDetailModal
+              modalIsOpen={modalIsOpen}
+              closeModal={closeModal}
+              projectMoreDetails={projectMoreDetails}
+            />
           </div>
         );
       })}

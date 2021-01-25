@@ -151,7 +151,6 @@
   position: absolute;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 10000;
   padding: 30px;
   text-align: center;
   align-items: center;

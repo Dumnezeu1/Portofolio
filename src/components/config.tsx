@@ -56,12 +56,13 @@ export const mobileProjects = [
         link: "https://www.google.ro",
       },
     ],
-    languages: [
-      { id: 1, name: "React Native", icon: faReact, link: "pyla" },
-      { id: 2, name: "React Native", icon: faReact, link: "pyla" },
-      { id: 3, name: "React Native", icon: faReact, link: "pyla" },
-      { id: 4, name: "React Native", icon: faReact, link: "pyla" },
-    ],
+    projectMoreDetails: {
+      detailedDescription: "DADADA",
+      languages: [
+        { id: 1, name: "React Native", icon: faReact, link: "pyla" },
+        { id: 2, name: "React Native", icon: faReact, link: "pyla" },
+      ],
+    },
   },
   {
     id: 2,
@@ -82,10 +83,13 @@ export const mobileProjects = [
         link: "https://www.google.ro",
       },
     ],
-    languages: [
-      { id: 1, name: "React Native", icon: faReact, link: "pyla" },
-      { id: 2, name: "React Native", icon: faReact, link: "pyla" },
-    ],
+    projectMoreDetails: {
+      detailedDescription: "DADADA",
+      languages: [
+        { id: 1, name: "React Native", icon: faReact, link: "pyla" },
+        { id: 2, name: "React Native", icon: faReact, link: "pyla" },
+      ],
+    },
   },
 ];
 
@@ -109,12 +113,13 @@ export const webProjects = [
         link: "https://www.google.ro",
       },
     ],
-    languages: [
-      { id: 1, name: "React Native", icon: faReact, link: "pyla" },
-      { id: 2, name: "React Native", icon: faReact, link: "pyla" },
-      { id: 3, name: "React Native", icon: faReact, link: "pyla" },
-      { id: 4, name: "React Native", icon: faReact, link: "pyla" },
-    ],
+    projectMoreDetails: {
+      detailedDescription: "DADADA",
+      languages: [
+        { id: 1, name: "React Native", icon: faReact, link: "pyla" },
+        { id: 2, name: "React Native", icon: faReact, link: "pyla" },
+      ],
+    },
   },
 
   {
@@ -125,10 +130,13 @@ export const webProjects = [
     imageUrl: servicePromotional,
     workingTime: "2020 - Current",
     liveData: [],
-    languages: [
-      { id: 1, name: "React Native", icon: faReact, link: "pyla" },
-      { id: 2, name: "React Native", icon: faReact, link: "pyla" },
-    ],
+    projectMoreDetails: {
+      detailedDescription: "DADADA",
+      languages: [
+        { id: 1, name: "React Native", icon: faReact, link: "pyla" },
+        { id: 2, name: "React Native", icon: faReact, link: "pyla" },
+      ],
+    },
   },
   {
     id: 3,
@@ -149,10 +157,13 @@ export const webProjects = [
         link: "https://www.google.ro",
       },
     ],
-    languages: [
-      { id: 1, name: "React Native", icon: faReact, link: "pyla" },
-      { id: 2, name: "React Native", icon: faReact, link: "pyla" },
-    ],
+    projectMoreDetails: {
+      detailedDescription: "DADADA",
+      languages: [
+        { id: 1, name: "React Native", icon: faReact, link: "pyla" },
+        { id: 2, name: "React Native", icon: faReact, link: "pyla" },
+      ],
+    },
   },
 ];
 
