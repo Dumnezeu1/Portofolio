@@ -11,8 +11,8 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    height: "70vh",
-    width: "70vh",
+    height: "80vh",
+    width: "90%",
     zIndex: 1,
   },
 };
@@ -52,6 +52,7 @@ const ProjectDetailsModal: React.FC<Props> = ({
       onRequestClose={closeModal}
       style={customStyles}
       contentLabel="Project Details Modal"
+      closeTimeoutMS={200}
     >
       <button onClick={closeModal}>close</button>
       <div>{projectMoreDetails.detailedDescription}</div>
