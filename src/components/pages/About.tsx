@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../style/dist/About.css";
+import "../style/About.css";
 
 import { educationData, experienceData } from "../config";
 

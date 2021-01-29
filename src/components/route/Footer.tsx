@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/dist/Footer.css";
+import "../style/Footer.css";
 
 import IconsRenderWithSpacer from "../utils/IconsRenderWithSpacer";
 import { brandIcons } from "../config";

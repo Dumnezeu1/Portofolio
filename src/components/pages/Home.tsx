@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/dist/Home.css";
+import "../style/Home.css";
 
 import { brandIcons, mobileProjects, webProjects } from "../config";
 

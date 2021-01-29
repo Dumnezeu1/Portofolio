@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../style/dist/Home.css";
+import "../style/Home.css";
 
 interface ListDataProps {
   listData: Array<{

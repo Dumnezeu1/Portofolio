@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Link } from "react-router-dom";
 
-import "../style/dist/Navbar.css";
+import "../style/Navbar.css";
 
 const navLinks = [
   { title: `Home`, path: `/` },
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
       </div>
       <div className="links_container">
         <ul>
-          {navLinks.map((navLink) => {
+          {navLinks.map((navLink, idx) => {
             const { title, path } = navLink;
             return (
               <li key={title}>

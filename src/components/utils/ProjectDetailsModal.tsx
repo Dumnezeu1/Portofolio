@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import ReactDOM from "react-dom";
 import Modal from "react-modal";
-import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const customStyles = {
   content: {
@@ -20,20 +21,16 @@ const customStyles = {
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement("#modal");
 
-interface Languages {
-  id: number;
-  name: string;
-  icon: IconDefinition;
-  link: string;
-}
-
 interface Props {
   modalIsOpen: boolean;
   closeModal: () => void;
   projectMoreDetails: {
-    languages?: Array<Languages>;
+    name: string;
+    role: string;
+    features: string;
+    languages: string;
     detailedDescription: string;
-  };
+  } | null;
 }
 
 const ProjectDetailsModal: React.FC<Props> = ({
@@ -54,15 +51,58 @@ const ProjectDetailsModal: React.FC<Props> = ({
       contentLabel="Project Details Modal"
       closeTimeoutMS={200}
     >
-      <button onClick={closeModal}>close</button>
-      <div>{projectMoreDetails.detailedDescription}</div>
-      <form>
-        <input />
-        <button>tab navigation</button>
-        <button>stays</button>
-        <button>inside</button>
-        <button>the modal</button>
-      </form>
+      <button
+        style={{
+          float: "right",
+          border: "none",
+          backgroundColor: "transparent",
+        }}
+        onClick={closeModal}
+      >
+        <FontAwesomeIcon
+          className="project_details_arrow"
+          icon={faTimes}
+          size="2x"
+          color="black"
+        />
+      </button>
+      <div>
+        <h1>{projectMoreDetails?.name}</h1>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          width: "100%",
+          height: "90%",
+        }}
+      >
+        <div className="project-details-left">
+          <div className="proiect-details-aside-container">
+            <h3>My role: </h3>
+            <p>{projectMoreDetails?.role}</p>
+          </div>
+          <div className="proiect-details-aside-container">
+            <h3>Application features: </h3>
+            <p>{projectMoreDetails?.features}</p>
+          </div>
+          <div className="proiect-details-aside-container">
+            <h3>Technologies: </h3>
+            <p>{projectMoreDetails?.languages} </p>
+          </div>
+        </div>
+        <div className="project-details-right">
+          <div>
+            <h2>Description</h2>
+            <p>{projectMoreDetails?.detailedDescription}</p>
+          </div>
+          <div>
+            <p>Da</p>
+          </div>
+        </div>
+      </div>
     </Modal>
   );
 };

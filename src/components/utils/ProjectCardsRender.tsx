@@ -1,5 +1,5 @@
-import React from "react";
-import "../style/dist/Home.css";
+import React, { useState } from "react";
+import "../style/Home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
@@ -14,11 +14,11 @@ interface LiveData {
   link: string;
 }
 
-interface Languages {
-  id: number;
-  name: string;
-  icon: IconDefinition;
-  link: string;
+interface ProjectMoreDetails {
+  role: string;
+  features: string;
+  languages: string;
+  detailedDescription: string;
 }
 
 interface ProjectData {
@@ -31,28 +31,29 @@ interface ProjectData {
     workingTime: string;
 
     liveData?: Array<LiveData>;
-    projectMoreDetails: {
-      languages?: Array<Languages>;
-      detailedDescription: string;
-    };
+    projectMoreDetails: ProjectMoreDetails;
   }>;
 }
 
 const ProjectCardsRender: React.FC<ProjectData> = ({ projectData }) => {
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [modalIsOpen, setIsOpen] = useState(false);
 
-  function openModal() {
+  const [modalData, setModalData] = useState(null);
+
+  function openModal(data: any) {
+    setModalData(data);
     setIsOpen(true);
   }
 
   function closeModal() {
     setIsOpen(false);
+    setModalData(null);
   }
 
   return (
     <>
-      {projectData.map((data) => {
-        const {
+      {projectData.map(
+        ({
           id,
           name,
           imageUrl,
@@ -61,63 +62,68 @@ const ProjectCardsRender: React.FC<ProjectData> = ({ projectData }) => {
           workingTime,
           liveData,
           projectMoreDetails,
-        } = data;
-        return (
-          <div className="project_container" key={id}>
-            <div>
-              <h3>
-                {name} - {details}
-              </h3>
-            </div>
-            <div style={{ flex: 1, position: "relative" }}>
-              <img
-                src={`../${imageUrl}`}
-                alt={name}
-                height="100%"
-                width="100%"
-              />
-              <div className="appbar">
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
-                  <p>{workingTime}</p>
-                  <h4>{description}</h4>
+        }) => {
+          return (
+            <div className="project_container" key={id}>
+              <div>
+                <h3>
+                  {name} - {details}
+                </h3>
+              </div>
+              <div style={{ flex: 1, position: "relative" }}>
+                <img
+                  src={`../${imageUrl}`}
+                  alt={name}
+                  height="100%"
+                  width="100%"
+                />
+                <div className="appbar">
                   <div
-                    onClick={openModal}
-                    style={{ display: "flex", alignItems: "center" }}
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                    }}
                   >
-                    <p>More details</p>
-                    <FontAwesomeIcon
-                      className="project_details_arrow"
-                      icon={faChevronRight}
-                      size="sm"
-                      color="#b1b5b9"
-                    />
+                    <p>{workingTime}</p>
+                    <h4>{description}</h4>
+                    <div
+                      onClick={() => openModal({ name, ...projectMoreDetails })}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        cursor: "pointer",
+                      }}
+                    >
+                      <p>More details</p>
+                      <FontAwesomeIcon
+                        className="project_details_arrow"
+                        icon={faChevronRight}
+                        size="sm"
+                        color="#b1b5b9"
+                      />
+                    </div>
                   </div>
-                </div>
 
-                {liveData && (
-                  <div style={{ width: "40%", margin: "0 auto" }}>
-                    <IconsRenderWithSpacer
-                      renderIcons={liveData}
-                      color={"white"}
-                    />
-                  </div>
-                )}
+                  {liveData && (
+                    <div style={{ width: "40%", margin: "0 auto" }}>
+                      <IconsRenderWithSpacer
+                        renderIcons={liveData}
+                        color={"white"}
+                      />
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-            <ProjectDetailModal
-              modalIsOpen={modalIsOpen}
-              closeModal={closeModal}
-              projectMoreDetails={projectMoreDetails}
-            />
-          </div>
-        );
-      })}
+          );
+        }
+      )}
+      <ProjectDetailModal
+        modalIsOpen={modalIsOpen}
+        closeModal={closeModal}
+        projectMoreDetails={modalData}
+      />
     </>
   );
 };
