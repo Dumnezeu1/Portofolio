@@ -7,7 +7,6 @@ import "../style/Navbar.css";
 const navLinks = [
   { title: `Home`, path: `/` },
   { title: `About`, path: `/about` },
-  { title: `Projects`, path: `/product` },
 ];
 
 const Header: React.FC = () => {
@@ -24,7 +23,7 @@ const Header: React.FC = () => {
   return (
     <nav
       className="navbar_container"
-      style={{ backgroundColor: scrollValue > 400 ? "white" : "transparent" }}
+      style={{ backgroundColor: scrollValue > 500 ? "white" : "transparent" }}
     >
       <div className="navbar_logo">
         <Link to="/">

@@ -12,10 +12,10 @@
   display: flex;
   flex-direction: column;
   align-self: center;
-  justify-content: space-between;
+  justify-content: center;
   min-height: 80vh;
   .developer {
-    margin: 0;
+    margin: 0 0 50px 0;
     font-size: 16vw;
     font-weight: 600;
     color: white;
@@ -23,12 +23,6 @@
     user-select: none;
     letter-spacing: 2vw;
     text-align: center;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .developer {
-    display: none;
   }
 }
 
@@ -243,9 +237,15 @@
   h2 {
     text-align: center;
   }
+  p {
+    margin: 10px 0;
+  }
 }
 
 @media only screen and (max-width: 768px) {
+  .developer {
+    display: none;
+  }
   .center {
     text-align: center;
   }
@@ -262,6 +262,10 @@
 
   .project-details-right {
     width: 100% !important;
+  }
+
+  .hero_container {
+    justify-content: center;
   }
 }
 

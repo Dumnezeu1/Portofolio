@@ -18,7 +18,7 @@ interface ProjectMoreDetails {
   role: string;
   features: string;
   languages: string;
-  detailedDescription: string;
+  detailedDescription: string[];
   libraries?: string;
   videoLink: string;
 }

@@ -31,7 +31,7 @@ interface Props {
     role: string;
     features: string;
     languages: string;
-    detailedDescription: string;
+    detailedDescription: string[];
     libraries?: string;
     videoLink: string;
   } | null;
@@ -96,7 +96,11 @@ const ProjectDetailsModal: React.FC<Props> = ({
         <div className="project-details-right">
           <div>
             <h2>Description</h2>
-            <p>{projectMoreDetails?.detailedDescription}</p>
+            {projectMoreDetails?.detailedDescription.map(
+              (projectDescription: string) => {
+                return <p>{projectDescription}</p>;
+              }
+            )}
           </div>
           <div
             style={{

@@ -22,14 +22,14 @@
           flex-direction: column;
   -ms-flex-item-align: center;
       align-self: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 80vh;
 }
 
 .hero_container .developer {
-  margin: 0;
+  margin: 0 0 50px 0;
   font-size: 16vw;
   font-weight: 600;
   color: white;
@@ -40,12 +40,6 @@
           user-select: none;
   letter-spacing: 2vw;
   text-align: center;
-}
-
-@media only screen and (max-width: 767px) {
-  .developer {
-    display: none;
-  }
 }
 
 .about_me {
@@ -353,7 +347,14 @@
   text-align: center;
 }
 
+.project-details-right p {
+  margin: 10px 0;
+}
+
 @media only screen and (max-width: 768px) {
+  .developer {
+    display: none;
+  }
   .center {
     text-align: center;
   }
@@ -373,6 +374,11 @@
   }
   .project-details-right {
     width: 100% !important;
+  }
+  .hero_container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
