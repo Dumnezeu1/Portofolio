@@ -42,8 +42,13 @@
   text-align: center;
 }
 
+@media only screen and (max-width: 767px) {
+  .developer {
+    display: none;
+  }
+}
+
 .about_me {
-  width: 40%;
   margin: 30px 30px;
   padding: 0 15%;
   -ms-flex-item-align: center;
@@ -218,6 +223,12 @@
           animation-iteration-count: infinite;
 }
 
+@media only screen and (max-width: 768px) {
+  .project_container {
+    max-width: 100% !important;
+  }
+}
+
 .appbar {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -274,6 +285,20 @@
           animation-iteration-count: infinite;
 }
 
+.project-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
 .project-details-left {
   width: 20%;
   -webkit-box-sizing: border-box;
@@ -326,6 +351,29 @@
 
 .project-details-right h2 {
   text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .center {
+    text-align: center;
+  }
+  .project-details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .project-details-left {
+    width: 100% !important;
+    text-align: center;
+  }
+  .project-details-right {
+    width: 100% !important;
+  }
 }
 
 @-webkit-keyframes textAppear {

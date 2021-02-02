@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
+import ReactPlayer from "react-player/youtube";
+
 const customStyles = {
   content: {
     top: "50%",
@@ -30,6 +32,8 @@ interface Props {
     features: string;
     languages: string;
     detailedDescription: string;
+    libraries?: string;
+    videoLink: string;
   } | null;
 }
 
@@ -66,19 +70,9 @@ const ProjectDetailsModal: React.FC<Props> = ({
           color="black"
         />
       </button>
-      <div>
-        <h1>{projectMoreDetails?.name}</h1>
-      </div>
+      <h1 className="center">{projectMoreDetails?.name}</h1>
 
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          width: "100%",
-          height: "90%",
-        }}
-      >
+      <div className="project-details">
         <div className="project-details-left">
           <div className="proiect-details-aside-container">
             <h3>My role: </h3>
@@ -92,14 +86,32 @@ const ProjectDetailsModal: React.FC<Props> = ({
             <h3>Technologies: </h3>
             <p>{projectMoreDetails?.languages} </p>
           </div>
+          {projectMoreDetails?.libraries && (
+            <div className="proiect-details-aside-container">
+              <h3>A few libraries worth mentioning: </h3>
+              <p>{projectMoreDetails?.libraries} </p>
+            </div>
+          )}
         </div>
         <div className="project-details-right">
           <div>
             <h2>Description</h2>
             <p>{projectMoreDetails?.detailedDescription}</p>
           </div>
-          <div>
-            <p>Da</p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: 100,
+              width: "100%",
+            }}
+          >
+            <ReactPlayer
+              url={projectMoreDetails?.videoLink}
+              controls={true}
+              muted={true}
+              style={{ maxWidth: 640 }}
+            />
           </div>
         </div>
       </div>

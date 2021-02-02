@@ -19,6 +19,8 @@ interface ProjectMoreDetails {
   features: string;
   languages: string;
   detailedDescription: string;
+  libraries?: string;
+  videoLink: string;
 }
 
 interface ProjectData {
