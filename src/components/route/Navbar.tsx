@@ -27,7 +27,12 @@ const Header: React.FC = () => {
     >
       <div className="navbar_logo">
         <Link to="/">
-          <h2>Alex Dumitrescu</h2>
+          <img
+            src="https://logopond.com/logos/211d9c927ce358e20581c624b74aaae1.png"
+            alt="Logo"
+            height="70"
+            width="70"
+          />
         </Link>
       </div>
       <div className="links_container">
@@ -35,7 +40,7 @@ const Header: React.FC = () => {
           {navLinks.map((navLink, idx) => {
             const { title, path } = navLink;
             return (
-              <li key={title}>
+              <li key={idx}>
                 <Link to={path}>
                   <p>{title}</p>
                 </Link>

@@ -24,24 +24,8 @@ const ListDataWithDetails: React.FC<ListDataProps> = ({ listData }) => {
       {listData.map((data) => {
         const { id, name, descriptions, date, technologies } = data;
         return (
-          <div
-            key={id}
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              minHeight: 50,
-              margin: "40px 0",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                marginRight: 5,
-              }}
-            >
+          <div key={id} className="experience_container">
+            <div className="experience_details_container">
               <h3 style={{ marginTop: 0, marginBottom: 5 }}>{name}</h3>
               {descriptions.map((description) => {
                 const { id, name } = description;

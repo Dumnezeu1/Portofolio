@@ -4,9 +4,6 @@
   display: flex;
   margin: 0 3%;
   min-height: 250px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-top: 1px solid #b1b5b9;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -23,9 +20,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  margin: 0 auto;
+  margin: 30px auto;
   min-width: 280px;
 }
 

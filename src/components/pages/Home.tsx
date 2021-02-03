@@ -14,6 +14,7 @@ const Home: React.FC = () => {
         <div className="hero_container">
           <p className="developer">Developer</p>
           <div className="about_me">
+            <h3>Alex Dumitrescu</h3>
             <h1>Website and mobile developer</h1>
             <p>
               I am specialized in front-end development with react on web and

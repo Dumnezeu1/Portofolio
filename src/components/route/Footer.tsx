@@ -3,7 +3,6 @@ import "../style/Footer.css";
 
 import IconsRenderWithSpacer from "../utils/IconsRenderWithSpacer";
 import { brandIcons } from "../config";
-import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -16,10 +15,9 @@ const Footer: React.FC = () => {
       </div>
       <div className="details_container">
         <h2>Currently Working</h2>
-        <div style={{ width: 260 }}>
-          <Link to="project">
-            <p>E-TWOW Connect</p>
-          </Link>
+        <div>
+          <p>E-TWOW Connect</p>
+          <p>E-TWOW Service</p>
         </div>
       </div>
     </footer>

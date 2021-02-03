@@ -70,35 +70,36 @@ const ProjectDetailsModal: React.FC<Props> = ({
           color="black"
         />
       </button>
-      <h1 className="center">{projectMoreDetails?.name}</h1>
 
-      <div className="project-details">
-        <div className="project-details-left">
-          <div className="proiect-details-aside-container">
+      <div className="project_details">
+        <div className="project_details_left">
+          <h1>{projectMoreDetails?.name}</h1>
+
+          <div className="proiect_details_aside_container">
             <h3>My role: </h3>
             <p>{projectMoreDetails?.role}</p>
           </div>
-          <div className="proiect-details-aside-container">
+          <div className="proiect_details_aside_container">
             <h3>Application features: </h3>
             <p>{projectMoreDetails?.features}</p>
           </div>
-          <div className="proiect-details-aside-container">
+          <div className="proiect_details_aside_container">
             <h3>Technologies: </h3>
             <p>{projectMoreDetails?.languages} </p>
           </div>
           {projectMoreDetails?.libraries && (
-            <div className="proiect-details-aside-container">
+            <div className="proiect_details_aside_container">
               <h3>A few libraries worth mentioning: </h3>
               <p>{projectMoreDetails?.libraries} </p>
             </div>
           )}
         </div>
-        <div className="project-details-right">
+        <div className="project_details_right">
           <div>
             <h2>Description</h2>
             {projectMoreDetails?.detailedDescription.map(
-              (projectDescription: string) => {
-                return <p>{projectDescription}</p>;
+              (projectDescription: string, index: number) => {
+                return <p key={index}>{projectDescription}</p>;
               }
             )}
           </div>

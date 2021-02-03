@@ -40,7 +40,7 @@ export const mobileProjects = [
     id: 1,
     name: "E-TWOW Connect",
     details: "Mobile Front-End (React native)",
-    description: "News, bluetooth and product showcase app",
+    description: "News, bluetooth and product showcase",
     imageUrl: connectPromotional,
     workingTime: "2020 - Current",
     liveData: [
@@ -75,7 +75,7 @@ export const mobileProjects = [
     id: 2,
     name: "E-TWOW EasyRental",
     details: "Mobile Front-End (React native)",
-    description: "Renting electric scooters app",
+    description: "Renting electric scooters",
     imageUrl: easyRentPromotional,
     workingTime: "2020 - Current",
     liveData: [
@@ -92,7 +92,7 @@ export const mobileProjects = [
     ],
     projectMoreDetails: {
       detailedDescription: [
-        "Renting kick scooter app.",
+        "Renting kick scooter.",
         "The user will create an account with his phone number (it will validate the number by the code sent by sms) and then will be redirected to home",
         "Then he can chose the day, the hour and the number of days he will rent the scooter.",
         "He can see the booking history at any time and the status of each booking",
@@ -109,9 +109,9 @@ export const mobileProjects = [
 export const webProjects = [
   {
     id: 1,
-    name: "Service",
+    name: "Dashboard",
     details: "Web Front-End (React)",
-    description: "Service management",
+    description: "Electric scooters service dashboard",
     imageUrl: servicePromotional,
     workingTime: "2020 - Current",
     liveData: [],
