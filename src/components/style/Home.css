@@ -60,6 +60,7 @@
 .about_me h3 {
   margin: 40px 0;
   color: #554d4d;
+  font-size: 1.5em;
 }
 
 .about_me p {
@@ -225,6 +226,9 @@
 @media only screen and (max-width: 768px) {
   .project_container {
     max-width: 100% !important;
+  }
+  .appbar h4 {
+    font-size: 1.6em !important;
   }
 }
 

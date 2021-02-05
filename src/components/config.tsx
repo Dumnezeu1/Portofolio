@@ -47,12 +47,13 @@ export const mobileProjects = [
       {
         id: 2,
         icon: faAppStore,
-        link: "https://www.google.ro",
+        link:
+          "https://apps.apple.com/ro/app/e-twow-connect/id1524191048?ign-itsct=apps_box&ign-itscg=30200",
       },
       {
         id: 3,
         icon: faGooglePlay,
-        link: "https://www.google.ro",
+        link: "https://play.google.com/store/apps/details?id=com.etwowconnect",
       },
     ],
     projectMoreDetails: {
@@ -82,12 +83,14 @@ export const mobileProjects = [
       {
         id: 2,
         icon: faAppStore,
-        link: "https://www.google.ro",
+        link:
+          "https://apps.apple.com/ro/app/e-twow-easyrental/id1505721539?itsct=apps_box&itscg=30200",
       },
       {
         id: 3,
         icon: faGooglePlay,
-        link: "https://www.google.ro",
+        link:
+          "https://play.google.com/store/apps/details?id=com.etwoweasyrental",
       },
     ],
     projectMoreDetails: {
