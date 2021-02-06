@@ -6,7 +6,7 @@ import {
   faGooglePlay,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faEnvelope, faEye } from "@fortawesome/free-regular-svg-icons";
 
 import connectPromotional from "./assets/projectsImages/connect/promotional.png";
 
@@ -16,6 +16,10 @@ import letsEatPromotional from "./assets/projectsImages/letsEat/promotional.png"
 
 import todoListPromotional from "./assets/projectsImages/todoList/promotional.png";
 import servicePromotional from "./assets/projectsImages/service/promotional.png";
+
+import easyRentWebPromotional from "./assets/projectsImages/easyrent/promotionalWeb.png";
+
+import contactKeeperPromotional from "./assets/projectsImages/contactKeeper/promotional.png";
 
 export const brandIcons = [
   {
@@ -37,7 +41,6 @@ export const brandIcons = [
 
 export const mobileProjects = [
   {
-    id: 1,
     name: "E-TWOW Connect",
     details: "Mobile Front-End (React native)",
     description: "News, bluetooth and product showcase",
@@ -69,11 +72,10 @@ export const mobileProjects = [
       languages: "Typescript, React Native",
       libraries:
         "React Navigation, Redux, RN Reanimated, RN Ble-Plx (Polidea), OneSignal, Lottie",
-      videoLink: "https://www.youtube.com/watch?v=7RJbsbSF4jA",
+      videoLink: "https://youtu.be/f9s9CWkJeNA",
     },
   },
   {
-    id: 2,
     name: "E-TWOW EasyRental",
     details: "Mobile Front-End (React native)",
     description: "Renting electric scooters",
@@ -104,17 +106,16 @@ export const mobileProjects = [
       features: "Renting kick scooters",
       languages: "React Native",
       libraries: "React Navigation, Redux, Animated Api, OneSignal, Lottie",
-      videoLink: "https://www.youtube.com/watch?v=7RJbsbSF4jA",
+      videoLink: "https://www.youtube.com/watch?v=k668pVJVHLc&feature=youtu.be",
     },
   },
 ];
 
 export const webProjects = [
   {
-    id: 1,
     name: "Dashboard",
     details: "Web Front-End (React)",
-    description: "Electric scooters service dashboard",
+    description: "Kick scooters service dashboard",
     imageUrl: servicePromotional,
     workingTime: "2020 - Current",
     liveData: [],
@@ -126,15 +127,68 @@ export const webProjects = [
         "The table has pagination, the user can change the pages or choose the number of display rows, they can search for certain sheets by certain data and filter them.",
         "The super user can add new parts or defects and modify them and can generate reports depending on the desired time period.",
       ],
-      role: "UI/UX design, React developer",
+      role: "UI/UX, React developer",
       features: "Service Dashboard",
       languages: "React",
-      videoLink: "https://www.youtube.com/watch?v=7RJbsbSF4jA",
+      // videoLink: null,
       libraries: "React Router, Redux, Material UI",
     },
   },
   {
-    id: 2,
+    name: "Dashboard",
+    details: "Web Front-End (React)",
+    description: "Kick scooters rent service",
+    imageUrl: easyRentWebPromotional,
+    workingTime: "2020",
+    liveData: [],
+    projectMoreDetails: {
+      detailedDescription: [
+        "Administration panel for scooter renting",
+        "Admins will manage one location (account will have an role, the role represent the location)",
+        "You can filter the renters, change an renting state, search for specific user.",
+        "The table has pagination, the user can change the pages or choose the number of display rows.",
+        "Admin can add new renters, this is used if the someone will not wan't to rent througth the app, admin on Bucharest for example can manage rents just for bucharest.",
+        "They can see every scooter for an specific location on the map.",
+        "And they can generate raports.",
+      ],
+      role: "UI/UX, React developer",
+      features: "Renting Dashboard",
+      languages: "React",
+      videoLink: "https://www.youtube.com/watch?v=b32sZMW7U54",
+      libraries: "React Router, Redux, Material UI",
+    },
+  },
+  {
+    name: "Contact-Keeper",
+    details: "React-Express-Mongo",
+    description: "Contact keeper app",
+    imageUrl: contactKeeperPromotional,
+    workingTime: "2020",
+    liveData: [
+      {
+        id: 1,
+        icon: faGithubAlt,
+        link: "https://github.com/Dumnezeu1/Contact-Keeper",
+      },
+      {
+        id: 2,
+        icon: faEye,
+        link: "https://www.google.ro",
+      },
+    ],
+    projectMoreDetails: {
+      detailedDescription: [
+        "User will need to register, then login and will get then to homepage.",
+        "Now he can save contacts (personal or profesional), can edit them, delete or search.",
+      ],
+      role: "React developer, Express (node), Mongo",
+      features: "Renting Dashboard",
+      languages: "React, Node",
+      videoLink: "https://www.youtube.com/watch?v=YVHOU74Y0wg",
+      libraries: "Express",
+    },
+  },
+  {
     name: "Let's Eat",
     details: "Web Front-End (React)",
     description: "Food order service",
@@ -148,7 +202,7 @@ export const webProjects = [
       },
       {
         id: 2,
-        icon: faAppStore,
+        icon: faEye,
         link: "https://www.google.ro",
       },
     ],
@@ -162,11 +216,10 @@ export const webProjects = [
       role: "UI/UX design, React developer",
       features: "Website for ordering food",
       languages: "React ",
-      videoLink: "https://www.youtube.com/watch?v=7RJbsbSF4jA",
+      videoLink: "https://www.youtube.com/watch?v=ixnPloGbv0I",
     },
   },
   {
-    id: 3,
     name: "Todo List",
     details: "Web Front-End (React)",
     description: "Basic todo list with local crud and filter.",
@@ -180,7 +233,7 @@ export const webProjects = [
       },
       {
         id: 2,
-        icon: faAppStore,
+        icon: faEye,
         link: "https://www.google.ro",
       },
     ],
@@ -189,7 +242,7 @@ export const webProjects = [
       role: "UI/UX design, React ",
       features: "News, Bluetooth, Product placement",
       languages: "React",
-      videoLink: "https://www.youtube.com/watch?v=7RJbsbSF4jA",
+      videoLink: "https://www.youtube.com/watch?v=hM3kd7E0__E",
     },
   },
 ];

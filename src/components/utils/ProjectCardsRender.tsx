@@ -20,12 +20,11 @@ interface ProjectMoreDetails {
   languages: string;
   detailedDescription: string[];
   libraries?: string;
-  videoLink: string;
+  videoLink?: string | null;
 }
 
 interface ProjectData {
   projectData: Array<{
-    id: number;
     name: string;
     details: string;
     description: string;
@@ -55,24 +54,33 @@ const ProjectCardsRender: React.FC<ProjectData> = ({ projectData }) => {
   return (
     <>
       {projectData.map(
-        ({
-          id,
-          name,
-          imageUrl,
-          description,
-          details,
-          workingTime,
-          liveData,
-          projectMoreDetails,
-        }) => {
+        (
+          {
+            name,
+            imageUrl,
+            description,
+            details,
+            workingTime,
+            liveData,
+            projectMoreDetails,
+          },
+          idx
+        ) => {
           return (
-            <div className="project_container" key={id}>
+            <div className="project_container" key={idx}>
               <div>
                 <h3>
                   {name} - {details}
                 </h3>
               </div>
-              <div style={{ flex: 1, position: "relative" }}>
+              <div
+                style={{
+                  flex: 1,
+                  maxHeight: 700,
+                  maxWidth: 700,
+                  position: "relative",
+                }}
+              >
                 <img
                   src={`../${imageUrl}`}
                   alt={name}

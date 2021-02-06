@@ -12,14 +12,18 @@ const Home: React.FC = () => {
     <div className="container">
       <section style={{ minHeight: "100vh" }}>
         <div className="hero_container">
-          <p className="developer">Developer</p>
+          {/* <p className="developer">Developer</p> */}
           <div className="about_me">
-            <h3>Alex Dumitrescu</h3>
-            <h1>Website and mobile developer</h1>
-            <p>
-              I am specialized in front-end development with react on web and
-              react-native on mobile but i can do back-end too.
-            </p>
+            <h3>Dumitrescu Cosmin-Alexandru</h3>
+            <h1>Web and mobile developer</h1>
+            <div style={{ margin: "40px 0" }}>
+              <p>
+                I am specialized in front-end development with react on web and
+                react-native on mobile.
+              </p>
+              <p>Somethimes i do some backend with node/express.</p>
+              <p>Expert in pdf and Bulbasaur.</p>
+            </div>
             <div style={{ width: 260, margin: "0 auto" }}>
               <IconsRenderWithSpacer renderIcons={brandIcons} />
             </div>

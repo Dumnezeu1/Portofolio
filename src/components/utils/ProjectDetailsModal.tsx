@@ -33,7 +33,7 @@ interface Props {
     languages: string;
     detailedDescription: string[];
     libraries?: string;
-    videoLink: string;
+    videoLink?: string;
   } | null;
 }
 
@@ -103,21 +103,25 @@ const ProjectDetailsModal: React.FC<Props> = ({
               }
             )}
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginTop: 100,
-              width: "100%",
-            }}
-          >
-            <ReactPlayer
-              url={projectMoreDetails?.videoLink}
-              controls={true}
-              muted={true}
-              style={{ maxWidth: 640 }}
-            />
-          </div>
+          {projectMoreDetails?.videoLink && (
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginTop: 100,
+                width: "100%",
+                height: "100%",
+              }}
+            >
+              <ReactPlayer
+                url={projectMoreDetails.videoLink}
+                controls={true}
+                muted={true}
+                height="100%"
+                width="100%"
+              />
+            </div>
+          )}
         </div>
       </div>
     </Modal>

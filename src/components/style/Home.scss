@@ -44,7 +44,7 @@
   p {
     font-size: 1.5em;
     color: rgb(85, 77, 77);
-    margin: 40px 0;
+    margin: 10px 0;
   }
 }
 
@@ -212,6 +212,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  height: 90%;
 }
 
 .project_details_left {
