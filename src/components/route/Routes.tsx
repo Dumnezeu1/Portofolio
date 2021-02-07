@@ -11,7 +11,6 @@ const Routes: React.FC = () => {
   return (
     <Router>
       <Navbar />
-      <div style={{ height: 60 }} />
       <Switch>
         <Route path="/about" component={About} />
         <Route exact path="/" component={Home} />

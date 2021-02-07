@@ -14,9 +14,8 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    height: "80vh",
+    height: "90%",
     width: "90%",
-    zIndex: 1,
   },
 };
 
@@ -111,6 +110,7 @@ const ProjectDetailsModal: React.FC<Props> = ({
                 marginTop: 100,
                 width: "100%",
                 height: "100%",
+                minHeight: 300,
               }}
             >
               <ReactPlayer
