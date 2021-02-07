@@ -22,7 +22,7 @@ const Home: React.FC = () => {
                 react-native on mobile.
               </p>
               <p>Somethimes i do some backend with node/express.</p>
-              <p>Expert in pdf and Bulbasaur.</p>
+              <p>Expert in pdf and bulbasaur.</p>
             </div>
             <div style={{ width: 260, margin: "0 auto" }}>
               <IconsRenderWithSpacer renderIcons={brandIcons} />

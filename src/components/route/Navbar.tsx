@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 
+// @ts-ignore
+import Logo from "../assets/logo.png";
+
 import "../style/Navbar.css";
 
 const navLinks = [
@@ -27,12 +30,7 @@ const Header: React.FC = () => {
     >
       <div className="navbar_logo">
         <Link to="/">
-          <img
-            src="https://logopond.com/logos/211d9c927ce358e20581c624b74aaae1.png"
-            alt="Logo"
-            height="70"
-            width="70"
-          />
+          <img src={Logo} alt="Logo" height="40" width="40" />
         </Link>
       </div>
       <div className="links_container">

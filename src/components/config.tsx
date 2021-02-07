@@ -173,7 +173,7 @@ export const webProjects = [
       {
         id: 2,
         icon: faEye,
-        link: "https://www.google.ro",
+        link: "https://contact-keeper-react-express.herokuapp.com",
       },
     ],
     projectMoreDetails: {
@@ -203,7 +203,7 @@ export const webProjects = [
       {
         id: 2,
         icon: faEye,
-        link: "https://www.google.ro",
+        link: "https://lets-eat1.netlify.app",
       },
     ],
     projectMoreDetails: {
@@ -234,7 +234,7 @@ export const webProjects = [
       {
         id: 2,
         icon: faEye,
-        link: "https://www.google.ro",
+        link: "https://todo-crud1.netlify.app",
       },
     ],
     projectMoreDetails: {
