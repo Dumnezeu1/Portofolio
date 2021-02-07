@@ -76,8 +76,8 @@ const ProjectCardsRender: React.FC<ProjectData> = ({ projectData }) => {
               <div
                 style={{
                   flex: 1,
-                  maxHeight: 700,
-                  maxWidth: 700,
+                  maxHeight: 900,
+                  maxWidth: 900,
                   position: "relative",
                 }}
               >
