@@ -14,12 +14,12 @@ const Home: React.FC = () => {
         <div className="hero_container">
           {/* <p className="developer">Developer</p> */}
           <div className="about_me">
-            <h3>Dumitrescu Cosmin-Alexandru</h3>
+            <h3>Cosmin-Alexandru Dumitrescu</h3>
             <h1>Web and mobile developer</h1>
             <div style={{ margin: "40px 0" }}>
               <p>
-                I am specialized in front-end development with react on web and
-                react-native on mobile.
+                I am specialized in front-end development with react and
+                react-native.
               </p>
               <p>Somethimes i do some backend with node/express.</p>
               <p>Expert in pdf and bulbasaur.</p>
