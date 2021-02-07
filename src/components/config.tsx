@@ -113,7 +113,7 @@ export const mobileProjects = [
 
 export const webProjects = [
   {
-    name: "Dashboard",
+    name: "E-TWOW Rent",
     details: "Web Front-End (React)",
     description: "Kick scooters service dashboard",
     imageUrl: servicePromotional,
@@ -135,7 +135,7 @@ export const webProjects = [
     },
   },
   {
-    name: "Dashboard",
+    name: "E-TWOW Service",
     details: "Web Front-End (React)",
     description: "Kick scooters rent service",
     imageUrl: easyRentWebPromotional,
